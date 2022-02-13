@@ -1,0 +1,30 @@
+services:
+  db:
+    image: "mcr.microsoft.com/mssql/server"
+    container_name: db
+    restart: always
+    environment:
+      MSSQL_SA_PASSWORD: "sqladmin123!@#"
+      SA_PASSWORD: "sqladmin123!@#"
+      ACCEPT_EULA: "Y"    
+  mepd_api:
+    build:
+      context: .
+      dockerfile: Host/Dockerfile
+    container_name: mepd_api
+    environment:
+      - "DatabaseSettings_ConnectionString=Server=db;Database=mepd_api;User Id=sa;Password=sqladmin123!@#;MultipleActiveResultSets=true"
+      - "DatabaseSettings_DBProvider=mssql"
+      - "HangfireSettings_Storage_ConnectionString=Server=db;Database=mepd_api;User Id=sa;Password=sqladmin123!@#;MultipleActiveResultSets=true"
+      - "HangfireSettings_Storage_StorageProvider=mssql"
+      - "ASPNETCORE_Kestrel__Certificates__Default__Password=SuperSecurePassword123!"
+      - "ASPNETCORE_Kestrel__Certificates__Default__Path=/https/CodeMatrix.Mepd.Host.pfx"
+    volumes:
+      - ~/.aspnet/https:/https:ro
+    ports:
+      - "5005:5005"
+      - "5006:5006"    
+    depends_on:
+      - db
+    restart: on-failure
+

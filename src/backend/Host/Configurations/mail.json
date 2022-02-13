@@ -1,0 +1,11 @@
+{
+  "MailSettings": {
+    "DisplayName": "MEPD System",
+    "EnableVerification": true,
+    "From": "no-reply.mepd@wfp.org",
+    "Host": "smtprelay.global.wfp.org",
+    "Password": "",
+    "Port": 25,
+    "UserName": ""
+  }
+}

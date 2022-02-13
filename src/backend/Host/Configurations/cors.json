@@ -1,0 +1,15 @@
+{
+  "CorsSettings": {
+    "Url": "*",
+    "Clients": [
+      {
+        "Policy": "CorsPolicy",
+        "Url": "*"
+      },
+      {
+        "Policy": "mepd_dashboard",
+        "Url": "*.wfppal.org"
+      }
+    ]
+  }
+}

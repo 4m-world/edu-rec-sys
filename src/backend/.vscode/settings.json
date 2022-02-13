@@ -1,0 +1,18 @@
+{
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "cSpell.words": [
+    "cannotbedeleted",
+    "cref",
+    "fshapidb",
+    "Mediat",
+    "mssqllocaldb",
+    "notdefault",
+    "nvarchar",
+    "serilogsettings",
+    "signalr",
+    "Upto",
+    "usernotfound",
+    "Xunit"
+  ]
+}

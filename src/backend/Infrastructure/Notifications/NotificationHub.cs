@@ -1,0 +1,44 @@
+﻿using CodeMatrix.Mepd.Application.Common.Exceptions;
+using CodeMatrix.Mepd.Application.Common.Interfaces;
+using Finbuckle.MultiTenant;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Logging;
+
+namespace CodeMatrix.Mepd.Infrastructure.Notifications;
+
+[Authorize]
+public class NotificationHub : Hub, ITransientService
+{
+    private readonly ITenantInfo _currentTenant;
+    private readonly ILogger<NotificationHub> _logger;
+
+    public NotificationHub(ILogger<NotificationHub> logger, ITenantInfo currentTenant)
+    {
+        _logger = logger;
+        _currentTenant = currentTenant;
+    }
+
+    public override async Task OnConnectedAsync()
+    {
+        if (_currentTenant is null)
+        {
+            throw new UnauthorizedException("Authentication Failed.");
+        }
+
+        await Groups.AddToGroupAsync(Context.ConnectionId, $"GroupTenant-{_currentTenant.Id}");
+
+        await base.OnConnectedAsync();
+
+        _logger.LogInformation("A client connected to NotificationHub: {connectionId}", Context.ConnectionId);
+    }
+
+    public override async Task OnDisconnectedAsync(Exception exception)
+    {
+        await Groups.RemoveFromGroupAsync(Context.ConnectionId, $"GroupTenant-{_currentTenant!.Id}");
+
+        await base.OnDisconnectedAsync(exception);
+
+        _logger.LogInformation("A client disconnected from NotificationHub: {connectionId}", Context.ConnectionId);
+    }
+}

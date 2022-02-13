@@ -1,0 +1,14 @@
+{
+  "SwaggerSettings": {
+    "Enable": true,
+    "Title": "MEPD v4.0.0 WebAPI",
+    "Version": "v1",
+    "Description": "MEPD Application WebApi built with Multitenancy Support.",
+    "ContactName": "Mohammed Melhem",
+    "ContactEmail": "mohammed.melhem@wfp.org",
+    "ContactUrl": "https://github.com/4m-world",
+    "License": false,
+    "LicenseName": "",
+    "LicenseUrl": ""
+  }
+}

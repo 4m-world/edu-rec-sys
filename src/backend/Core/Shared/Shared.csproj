@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<RootNamespace>CodeMatrix.Mepd.Shared</RootNamespace>
+		<AssemblyName>CodeMatrix.Mepd.Shared</AssemblyName>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<NoWarn>1591</NoWarn>
+	</PropertyGroup>
+
+</Project>
