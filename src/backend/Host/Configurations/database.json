@@ -1,8 +1,7 @@
 {
   "DatabaseSettings": {
     "DBProvider": "mssql",
-    "ConnectionString": "Data Source=WFPPSJER0016205\\MEPD_DEV_DBE;Initial Catalog=MEPD_DEV;Integrated Security=True;MultipleActiveResultSets=True",
-    "EncryptionKey": "33743677397A24432646294A404E6351"
-    //"ConnectionString": "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=mepd_db;Integrated Security=True;MultipleActiveResultSets=True"
+    "EncryptionKey": "33743677397A24432646294A404E6351",
+    "ConnectionString": "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=mepd_db;Integrated Security=True;MultipleActiveResultSets=True"
   }
 }

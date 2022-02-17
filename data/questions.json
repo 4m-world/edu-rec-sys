@@ -1,0 +1,163 @@
+[
+	{
+		"type": "html",
+		"name": "intro",
+		"html": "مرحبا بك في نظام الارشاد الاكاديمي، من اجل ارشادك لاختيار تخصص يناسبك يرجى تزويدنا ببعض المعلومات عن مرحلة الدراسة المدرسية"
+	},
+	{
+		"type": "radiogroup",
+		"name": "gender",
+		"title": "هل يمكنك ان تخبرنا ما هو جنسك؟",
+		"isRequired": true,
+		"choices": [
+			{
+				"value": "f",
+				"text": "انثى"
+			},
+			{
+				"value": "m",
+				"text": "ذكر"
+			}
+		],
+		"colCount": 2
+	},
+	{
+		"type": "text",
+		"name": "gpa",
+		"title": "ما هو تحصيلك العام في الامتحانات العامة (التوجيهي)",
+		"inputType": "number",
+		"isRequired": true,
+		"min": "0",
+		"max": "100"
+	},
+	{
+		"type": "text",
+		"name": "math",
+		"title": "كم هو معدلك في مادة الرياضيات",
+		"inputType": "number",
+		"isRequired": true,
+		"min": "0",
+		"max": "100"
+	},
+	{
+		"type": "text",
+		"name": "phys",
+		"title": "كم هو معدلك في مادة الفيزياء",
+		"inputType": "number",
+		"isRequired": true,
+		"min": "0",
+		"max": "100"
+	},
+	{
+		"type": "html",
+		"name": "intro2",
+		"html": "من اجل الحصول على نتائج اكثر دقة نريد منك الاجابة عن بعضل الاسئلة العامة حول ميولك العالم"
+	},
+	{
+		"type": "radiogroup",
+		"name": "art",
+		"title": "هل لديك اهتمامات فنية مثيل الرسم او التشكيل؟",
+		"isRequired": true,
+		"choices": [
+			{
+				"value": "1",
+				"text": "نعم"
+			},
+			{
+				"value": "0",
+				"text": "لا"
+			}
+		],
+		"colCount": 2
+	},
+	{
+		"type": "radiogroup",
+		"name": "ana",
+		"title": "هل انت شخص تحليلي؟",
+		"isRequired": true,
+		"choices": [
+			{
+				"value": "1",
+				"text": "نعم"
+			},
+			{
+				"value": "0",
+				"text": "لا"
+			}
+		],
+		"colCount": 2
+	},
+	{
+		"type": "radiogroup",
+		"name": "arch",
+		"title": "هل لديك فضول في بناء الأشياء؟",
+		"isRequired": true,
+		"choices": [
+			{
+				"value": "1",
+				"text": "نعم"
+			},
+			{
+				"value": "0",
+				"text": "لا"
+			}
+		],
+		"colCount": 2
+	},
+	{
+		"type": "radiogroup",
+		"name": "elect",
+		"title": "هل لديك فضول في الأجهزة الالكترونية؟",
+		"isRequired": true,
+		"choices": [
+			{
+				"value": "1",
+				"text": "نعم"
+			},
+			{
+				"value": "0",
+				"text": "لا"
+			}
+		],
+		"colCount": 2
+	},
+	{
+		"type": "radiogroup",
+		"name": "mech",
+		"title": "هل لديك ميول ميكانيكية؟",
+		"isRequired": true,
+		"choices": [
+			{
+				"value": "1",
+				"text": "نعم"
+			},
+			{
+				"value": "0",
+				"text": "لا"
+			}
+		],
+		"colCount": 2
+	},
+	{
+		"type": "radiogroup",
+		"name": "workout",
+		"title": "انت تفضل العمل خارج المكتب؟",
+		"isRequired": true,
+		"choices": [
+			{
+				"value": "1",
+				"text": "نعم"
+			},
+			{
+				"value": "0",
+				"text": "لا"
+			}
+		],
+		"colCount": 2
+	},
+	{
+		"type": "html",
+		"name": "intro3",
+		"html": " شكرا لك على المعلومات التي قمت بتزويدها سيتم الان معالجة البيانات وتزويدك بالاقتراحات في حال كنت تريد المتابعة اضغط على متابعة او في حال تريد البدء من جديد اختر اعادة"
+	}
+]

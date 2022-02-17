@@ -14,6 +14,7 @@ global using MediatR;
 global using Microsoft.Extensions.Localization;
 global using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.ML;
 using System.Reflection;
 
 namespace CodeMatrix.Mepd.Application
@@ -23,6 +24,9 @@ namespace CodeMatrix.Mepd.Application
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             var assembly = Assembly.GetExecutingAssembly();
+
+            services.AddPredictionEnginePool<Dump.Models.StudentProfileModel, Dump.Models.StudentMajorPredictOutput>()
+                .FromFile(modelName: Dump.DumpConstants.ModelName, filePath: "Files/model.zip", watchForChanges: true);
 
             return services
                 .AddValidatorsFromAssembly(assembly)

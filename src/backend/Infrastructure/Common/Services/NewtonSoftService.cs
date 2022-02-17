@@ -20,9 +20,9 @@ public class NewtonSoftService : ISerializerService
             NullValueHandling = NullValueHandling.Ignore,
             Converters = new List<JsonConverter>
                 {
-                    new StringEnumConverter() { NamingStrategy = new CamelCaseNamingStrategy() }
+                    new StringEnumConverter(true) //{ NamingStrategy = new CamelCaseNamingStrategy() }
                 }
-        });
+        }) ;
     }
 
     public string Serialize<T>(T obj, Type type)

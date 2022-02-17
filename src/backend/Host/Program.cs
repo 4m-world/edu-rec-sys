@@ -32,13 +32,13 @@ namespace CodeMatrix.Mepd.Host
                 var builder = WebApplication.CreateBuilder(args);
 
                 // Keep the previous behavior of allowing an unhandled exception in a BackgroundService to not stop the Host
-                builder.Host.ConfigureServices(services =>
-                {
-                    services.Configure<HostOptions>(options =>
-                    {
-                        options.BackgroundServiceExceptionBehavior = BackgroundServiceExceptionBehavior.Ignore;
-                    });
-                });
+                //builder.Host.ConfigureServices(services =>
+                //{
+                //    services.Configure<HostOptions>(options =>
+                //    {
+                //        options.BackgroundServiceExceptionBehavior = BackgroundServiceExceptionBehavior.Ignore;
+                //    });
+                //});
 
                 builder.Host.AddConfigurations();
                 builder.Host.UseSerilog((_, config) =>

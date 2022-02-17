@@ -1,5 +1,6 @@
 using CodeMatrix.Mepd.Application.Common.Events;
 using CodeMatrix.Mepd.Application.Common.Interfaces;
+using CodeMatrix.Mepd.Domain.Dump;
 using CodeMatrix.Mepd.Infrastructure.Persistence.Configurations;
 using Finbuckle.MultiTenant;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,8 @@ namespace CodeMatrix.Mepd.Infrastructure.Persistence.Contexts;
 /// </summary>
 public class ApplicationDbContext : BaseDbContext
 {
+    public DbSet<StudyMajor> StudyMajors=> Set<StudyMajor>();
+
     public ApplicationDbContext(
         ITenantInfo currentTenant,
         DbContextOptions options,
