@@ -1,0 +1,4 @@
+﻿{
+	"training_data": "training.csv",
+	"testing_data": "test.csv"
+}
