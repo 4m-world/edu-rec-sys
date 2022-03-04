@@ -6,6 +6,7 @@
 /*Main Body Style Start*/
 body{
     width:80%;
+    height:80%;
     margin:0 auto;
     background-image: url("background-logo.jpg");
     background-repeat: repeat;
@@ -19,7 +20,9 @@ body{
 
     .container{
         margin-top: 5%;
+        margin-bottom: 5%;
         background-color:white;
+        height:650px;
     }
 
     .logo{
@@ -50,13 +53,33 @@ body{
 .chatbox{
     flex:1;
     order:2;
+    margin:5px;
+    padding:5px;
+    width: 500px;
+    height: 400px;
+    overflow: auto;
+    text-align:justify;
     }
     
 .slider{
     flex:1;
     order:1;
+    object-fit: contain;
     }
-    
+
+
+.slider img{
+
+    object-fit: fill;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+slider_box{
+
+
+
+}
 /*Container2 - Style End*/
 
 
@@ -101,7 +124,7 @@ body{
 }
 
 .wrapper .box {
-    border: 1px solid #efefef;
+
     padding: 10px 15px;
 
 }
@@ -113,7 +136,7 @@ body{
 }
 
 .wrapper .box .item .icon {
-    background: #007bff;
+       background-image:url("icon.png");
     color: white;
     width: 40px;
     height: 40px;
@@ -128,7 +151,7 @@ body{
     border-radius: 10px;
     margin-left: 10px;
     padding:10px;
-    width:80%;
+
 }
 
 .wrapper .box .item .msg p {
